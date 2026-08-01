@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 3 3 3; /* #030303 */
+  --foreground: 255 255 255;
+  --cyber-purple: 139 92 246; /* #8b5cf6 */
+  --cyber-cyan: 6 182 212;   /* #06b6d4 */
+  --cyber-orange: 249 115 22; /* #f97316 */
+  --cyber-green: 16 185 129;  /* #10b981 */
+  --cyber-rose: 244 63 94;    /* #f43f5e */
+}
+
+body {
+  color: rgb(var(--foreground));
+  background: radial-gradient(circle at 50% 0%, #150d2d 0%, #030303 70%);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Premium Dark Glass effect */
+.glass-panel {
+  background: rgba(10, 10, 18, 0.45);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5),
+              inset 0 1px 1px 0 rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel:hover {
+  border-color: rgba(139, 92, 246, 0.25);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.75),
+              0 0 20px 0 rgba(139, 92, 246, 0.05),
+              inset 0 1px 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* Extra premium card with dynamic neon border shadow */
+.glass-panel-purple {
+  background: rgba(15, 10, 25, 0.5);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(139, 92, 246, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6),
+              0 0 15px rgba(139, 92, 246, 0.1);
+  border-radius: 16px;
+}
+
+.glass-panel-cyan {
+  background: rgba(10, 20, 25, 0.5);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(6, 182, 212, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6),
+              0 0 15px rgba(6, 182, 212, 0.1);
+  border-radius: 16px;
+}
+
+/* Custom interactive inputs matching vision OS */
+.glass-input {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  color: white;
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+}
+
+.glass-input:focus {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(139, 92, 246, 0.6);
+  box-shadow: 0 0 12px rgba(139, 92, 246, 0.2);
+}
+
+/* Glowing text & icons */
+.glow-text-purple {
+  text-shadow: 0 0 8px rgba(139, 92, 246, 0.6);
+}
+
+.glow-text-cyan {
+  text-shadow: 0 0 8px rgba(6, 182, 212, 0.6);
+}
+
+.glow-text-orange {
+  text-shadow: 0 0 8px rgba(249, 115, 22, 0.6);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Dynamic custom scanning/biometric animation */
+@keyframes scanning {
+  0% { transform: translateY(0); opacity: 0.2; }
+  50% { opacity: 0.8; }
+  100% { transform: translateY(220px); opacity: 0.2; }
+}
+
+.biometric-scanner-line {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #8b5cf6, #06b6d4, transparent);
+  animation: scanning 3s linear infinite;
+}
+
+/* Matrix glow grid */
+.grid-bg {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
