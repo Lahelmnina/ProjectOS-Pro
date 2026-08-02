@@ -1,0 +1,13 @@
+
+> projectos-pro@1.0.0 dev
+> next dev
+
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3000
+
+ ✓ Starting...
+ ✓ Ready in 1727ms
+ ○ Compiling / ...
+ ✓ Compiled / in 10.9s (1386 modules)
+ GET / 200 in 11612ms
+ ✓ Compiled in 921ms (700 modules)
